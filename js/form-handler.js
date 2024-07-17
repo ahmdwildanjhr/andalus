@@ -4,7 +4,7 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
 
-    var url = "https://script.google.com/macros/s/AKfycbxQm7v1vKCGYihieRB099hjxPXzk4FeL5D2QHgZ2YqgBsHTUALSRWpqMv8MoC6HK_gW/exec";
+    var url = "https://script.google.com/macros/s/AKfycbzc9fcj7H96mtG8JJYWbrON_Z0qBRrA_ZZ0wvQrDp-_UQPMAwscQAzibDumGLaCy9Y/exec";
 
     var data = {
         "name": name,
