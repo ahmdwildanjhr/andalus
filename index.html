@@ -302,7 +302,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 mx-auto text-center">
-					<h2 class="section-title">Testimonials</h2>
+					<h2 class="section-title">Testimoni Pelanggan</h2>
 				</div>
 			</div>
 
@@ -323,16 +323,8 @@
 
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
-												<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis.
-													Donec vitae
-													odio quis nisl dapibus malesuada. Nullam ac aliquet
-													velit. Aliquam
-													vulputate velit imperdiet dolor tempor tristique.
-													Pellentesque
-													habitant morbi tristique senectus et netus et
-													malesuada fames ac
-													turpis egestas. Integer convallis volutpat dui quis
-													scelerisque.&rdquo;</p>
+												<p>&ldquo;Proses pemesanan sangat mudah dan cepat. Saya sangat senang
+													dengan pelayanan yang ramah dan profesional.&rdquo;</p>
 											</blockquote>
 
 											<div class="author-info">
@@ -499,23 +491,27 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="subscription-form">
-						<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg"
-									alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
-
-						<form action="#" class="row g-3">
+						<h3 class="d-flex align-items-center">
+							<span class="me-1">
+								<img src="images/envelope-outline.svg" alt="Image" class="img-fluid">
+							</span>
+							<span>Subscribe to Newsletter</span>
+						</h3>
+						<form id="subscriptionForm" class="row g-3">
 							<div class="col-auto">
-								<input type="text" class="form-control" placeholder="Enter your name">
+								<input type="text" id="name" class="form-control" placeholder="Enter your name"
+									required>
 							</div>
 							<div class="col-auto">
-								<input type="email" class="form-control" placeholder="Enter your email">
+								<input type="email" id="email" class="form-control" placeholder="Enter your email"
+									required>
 							</div>
 							<div class="col-auto">
-								<button class="btn btn-primary">
+								<button type="submit" class="btn btn-primary">
 									<span class="fa fa-paper-plane"></span>
 								</button>
 							</div>
 						</form>
-
 					</div>
 				</div>
 			</div>
@@ -607,6 +603,7 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/form-handler.js"></script>
 </body>
 
 </html>
