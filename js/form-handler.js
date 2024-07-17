@@ -1,21 +1,30 @@
-$(document).ready(function () {
-    $('#subscriptionForm').on('submit', function (e) {
-        e.preventDefault();
-        var name = $('#name').val();
-        var email = $('#email').val();
-        console.log({ name: name, email: email }); // Tambahkan ini untuk debugging
+document.getElementById("subscriptionForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbxQm7v1vKCGYihieRB099hjxPXzk4FeL5D2QHgZ2YqgBsHTUALSRWpqMv8MoC6HK_gW/exec', // Ganti dengan URL Web App Anda
-            method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({ name: name, email: email }),
-            success: function (response) {
-                alert('Subscription successful!');
-            },
-            error: function (err) {
-                alert('Error: ' + err.responseText);
-            }
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+
+    var url = "https://script.google.com/macros/s/AKfycbxQm7v1vKCGYihieRB099hjxPXzk4FeL5D2QHgZ2YqgBsHTUALSRWpqMv8MoC6HK_gW/exec";
+
+    var data = {
+        "name": name,
+        "email": email
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            alert("Subscription successful!");
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("Subscription failed.");
         });
-    });
 });
