@@ -5,7 +5,7 @@ $(document).ready(function () {
         var email = $('#email').val();
 
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbyuSYL2e6McT6J0txrBPyHEHGbaGFLA0YvU5Sr2bSc98BBN0Nt9P5JEuBLzPHKJDF6q/exec',
+            url: 'https://script.google.com/macros/s/AKfycbxQm7v1vKCGYihieRB099hjxPXzk4FeL5D2QHgZ2YqgBsHTUALSRWpqMv8MoC6HK_gW/exec',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ name: name, email: email }),
