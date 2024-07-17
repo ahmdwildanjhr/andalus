@@ -3,9 +3,10 @@ $(document).ready(function () {
         e.preventDefault();
         var name = $('#name').val();
         var email = $('#email').val();
+        console.log({ name: name, email: email }); // Tambahkan ini untuk debugging
 
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbxQm7v1vKCGYihieRB099hjxPXzk4FeL5D2QHgZ2YqgBsHTUALSRWpqMv8MoC6HK_gW/exec',
+            url: 'https://script.google.com/macros/s/AKfycbxQm7v1vKCGYihieRB099hjxPXzk4FeL5D2QHgZ2YqgBsHTUALSRWpqMv8MoC6HK_gW/exec', // Ganti dengan URL Web App Anda
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ name: name, email: email }),
