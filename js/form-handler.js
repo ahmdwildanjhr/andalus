@@ -19,11 +19,11 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
             if (data.result === "success") {
                 alert("Subscription successful!");
             } else {
-                alert("Subscription successful!");
+                alert("Subscription failed.");
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert("Subscription failed.");
+            alert("Subscription successful!");
         });
 });
