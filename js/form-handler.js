@@ -17,14 +17,14 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
         .then(response => response.json())
         .then(data => {
             console.log("Respons JSON:", data); // Tambahkan ini untuk melihat respons
-            if (data.result === "success") {
-                alert("Subscription successful!");
-            } else {
-                alert("Subscription failed.");
-            }
+            // if (data.result === "success") {
+            //     alert("Subscription successful!");
+            // } else {
+            //     alert("Subscription failed.");
+            // }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert("Subscription failed.");
+            // alert("Subscription failed.");
         });
 });
