@@ -12,9 +12,7 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
 
     fetch(url, {
         method: 'POST',
-        body: data,
-        mode: 'no-cors' // Tambahkan ini untuk pengujian
-
+        body: data
     })
         .then(response => response.json())
         .then(data => {
@@ -35,4 +33,6 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
             messageDiv.style.color = "red";
             messageDiv.style.display = "block";
         });
+
+    return false; // Mengembalikan false untuk mencegah pengiriman formulir secara default
 });
