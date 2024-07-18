@@ -16,15 +16,21 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
     })
         .then(response => response.json())
         .then(data => {
-            console.log("Respons JSON:", data); // Tambahkan ini untuk melihat respons
-            // if (data.result === "success") {
-            //     alert("Subscription successful!");
-            // } else {
-            //     alert("Subscription failed.");
-            // }
+            var messageDiv = document.getElementById("message");
+            if (data.result === "success") {
+                messageDiv.innerHTML = "Subscription successful!";
+                messageDiv.style.color = "green";
+            } else {
+                messageDiv.innerHTML = "Subscription failed.";
+                messageDiv.style.color = "red";
+            }
+            messageDiv.style.display = "block";
         })
         .catch(error => {
             console.error('Error:', error);
-            // alert("Subscription failed.");
+            var messageDiv = document.getElementById("message");
+            messageDiv.innerHTML = "Subscription failed.";
+            messageDiv.style.color = "red";
+            messageDiv.style.display = "block";
         });
 });
