@@ -1,4 +1,4 @@
-document.getElementById("subscriptionForm").addEventListener("submit", function(e) {
+document.getElementById("subscriptionForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     var name = document.getElementById("name").value;
@@ -14,16 +14,16 @@ document.getElementById("subscriptionForm").addEventListener("submit", function(
         method: 'POST',
         body: data
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === "success") {
-            alert("Subscription successful!");
-        } else {
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === "success") {
+                alert("Subscription successful!");
+            } else {
+                alert("Subscription successful!");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
             alert("Subscription failed.");
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("Subscription failed.");
-    });
+        });
 });
