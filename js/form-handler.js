@@ -1,8 +1,11 @@
 document.getElementById("subscriptionForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+
+    var name = nameInput.value;
+    var email = emailInput.value;
 
     var url = "https://script.google.com/macros/s/AKfycbx-neSGmDiQhRM4X7vIghJPzphoGBOIsk5eMw50ageXNPzuuAviBs0j58t2xcMWxEht/exec";
 
@@ -12,29 +15,22 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
 
     fetch(url, {
         method: 'POST',
-        body: data,
-        mode: 'no-cors' // Mode 'no-cors' ditambahkan untuk pengujian
-
+        body: data
     })
         .then(response => response.json())
         .then(data => {
-            var messageDiv = document.getElementById("message");
-            if (data.result === "success") {
-                messageDiv.innerHTML = "Subscription successful!";
-                messageDiv.style.color = "green";
-            } else {
-                messageDiv.innerHTML = "Subscription failed.";
-                messageDiv.style.color = "red";
-            }
-            messageDiv.style.display = "block";
+            console.log("Respons JSON:", data); // Tambahkan ini untuk melihat respons di console
+            // Mengosongkan field input setelah berhasil mengirim data
+            nameInput.value = "";
+            emailInput.value = "";
+            // if (data.result === "success") {
+            //     alert("Subscription successful!");
+            // } else {
+            //     alert("Subscription failed.");
+            // }
         })
         .catch(error => {
             console.error('Error:', error);
-            var messageDiv = document.getElementById("message");
-            messageDiv.innerHTML = "Subscription failed.";
-            messageDiv.style.color = "red";
-            messageDiv.style.display = "block";
+            // alert("Subscription failed.");
         });
-
-    return false; // Mengembalikan false untuk mencegah pengiriman formulir secara default
 });
