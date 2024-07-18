@@ -13,7 +13,7 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
     fetch(url, {
         method: 'POST',
         body: data,
-        // mode: 'no-cors' // Tambahkan ini untuk pengujian
+        mode: 'no-cors' // Tambahkan ini untuk pengujian
 
     })
         .then(response => response.json())
