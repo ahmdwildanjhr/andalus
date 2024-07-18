@@ -13,6 +13,10 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
     data.append("name", name);
     data.append("email", email);
 
+    // Mengosongkan field input setelah tombol submit diklik
+    nameInput.value = "";
+    emailInput.value = "";
+
     fetch(url, {
         method: 'POST',
         body: data
@@ -20,9 +24,6 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
         .then(response => response.json())
         .then(data => {
             console.log("Respons JSON:", data); // Tambahkan ini untuk melihat respons di console
-            // Mengosongkan field input setelah berhasil mengirim data
-            nameInput.value = "";
-            emailInput.value = "";
             // if (data.result === "success") {
             //     alert("Subscription successful!");
             // } else {
