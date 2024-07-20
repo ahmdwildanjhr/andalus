@@ -24,14 +24,14 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
         .then(response => response.json())
         .then(data => {
             console.log("Respons JSON:", data); // Tambahkan ini untuk melihat respons di console
-            // if (data.result === "success") {
-            //     alert("Subscription successful!");
-            // } else {
-            //     alert("Subscription failed.");
-            // }
+            // Menampilkan notifikasi
+            var notification = document.getElementById("notification");
+            notification.style.display = "block";
+            setTimeout(function () {
+                notification.style.display = "none";
+            }, 3000); // Notifikasi ditampilkan selama 3 detik
         })
         .catch(error => {
             console.error('Error:', error);
-            // alert("Subscription failed.");
         });
 });
