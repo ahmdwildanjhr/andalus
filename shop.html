@@ -151,7 +151,7 @@
 				</div>
 				<!-- End Column 4 -->
 
-				<h2 class="section-title">Undangan</h2>
+				<h2 class="section-title" style="margin-bottom: 18px;">Undangan</h2>
 
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5">
@@ -215,49 +215,61 @@
 
 
 	<!-- Start Footer Section -->
-	<footer class="footer-section">
+	<footer class="footer-section" style="padding-bottom: 40px;">
 		<div class="container relative">
 
 			<div class="sofa-img">
-				<img src="images/sofa.png" alt="Image" class="img-fluid">
+				<img src="images/xbanner.png" alt="Image" class="img-fluid">
 			</div>
 
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="subscription-form">
-						<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg"
-									alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
-
-						<form action="#" class="row g-3">
-							<div class="col-auto">
-								<input type="text" class="form-control" placeholder="Enter your name">
-							</div>
-							<div class="col-auto">
-								<input type="email" class="form-control" placeholder="Enter your email">
-							</div>
-							<div class="col-auto">
-								<button class="btn btn-primary">
-									<span class="fa fa-paper-plane"></span>
-								</button>
-							</div>
-						</form>
-
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center">
+								<span class="me-1">
+									<img src="images/envelope-outline.svg" alt="Image" class="img-fluid">
+								</span>
+								<span>Subscribe to Newsletter</span>
+							</h3>
+							<p>Dapatkan informasi terbaru tentang PROMO SPESIAL dari ANDALUS</p>
+							<form id="subscriptionForm" class="row g-3">
+								<div class="col-auto">
+									<input type="text" id="name" class="form-control" placeholder="Enter your name"
+										required>
+								</div>
+								<div class="col-auto">
+									<input type="email" id="email" class="form-control" placeholder="Enter your email"
+										required>
+								</div>
+								<div class="col-auto">
+									<button type="submit" class="btn btn-primary">
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+							</form>
+							<div id="notification" style="display:none; position: absolute; color: #333333;">Terima
+								kasih sudah
+								subscribe.</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="row g-5 mb-5">
 				<div class="col-lg-4">
-					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-					<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
-						malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
-						Pellentesque habitant</p>
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Andalus Media
+							Grafika<span>.</span></a>
+					</div>
+					<p class="mb-4">Percetakan kami menyediakan layanan cetak banner, undangan, buku yasin, kartu nama,
+						brosur, nota, dan berbagai kebutuhan cetak lainnya. Dengan kualitas cetak terbaik dan pelayanan
+						profesional</p>
 
 					<ul class="list-unstyled custom-social">
-						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						<li><a href="https://www.facebook.com/profile.php?id=100006664426623" target="_blank"><span
+									class=" fa fa-brands fa-facebook-f"></span></a></li>
+						<li><a href="https://www.instagram.com/andalus_assamadinah/" target="_blank"><span
+									class="fa fa-brands fa-instagram"></span></a></li>
 					</ul>
 				</div>
 
@@ -305,9 +317,13 @@
 				<div class="row pt-4">
 					<div class="col-lg-6">
 						<p class="mb-2 text-center text-lg-start">Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
-							Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a
-								href="https://themewagon.com">ThemeWagon</a>
+							<script>document.write(new Date().getFullYear());</script>. All Rights
+							Reserved. &mdash;
+							Designed with love by <a href="https://ahmdwildanjhr.github.io/portfolio/"
+								target="_blank">Awil
+								Designer</a>
+							Distributed
+							By <a href="https://themewagon.com" target="_blank">AWI Digital</a>
 							<!-- License information: https://untree.co/license/ -->
 						</p>
 					</div>
@@ -330,6 +346,7 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/form-handler.js"></script>
 </body>
 
 </html>

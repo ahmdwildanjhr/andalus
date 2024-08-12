@@ -30,5 +30,5 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
     notification.style.display = "block";
     setTimeout(function () {
         notification.style.display = "none";
-    }, 3000); // Notifikasi ditampilkan selama 5 detik
+    }, 3000); // Notifikasi ditampilkan selama 3 detik
 });
